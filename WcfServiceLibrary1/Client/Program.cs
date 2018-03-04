@@ -6,7 +6,9 @@ namespace Client
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MathsOperationClient client = new MathsOperationClient();
+            Console.Write(client.add(5, 5));
+            Console.WriteLine(client.add(10, 10));
         }
     }
 }
