@@ -91,8 +91,18 @@ namespace Client
 
         public void Process(string[] args)
         {
+            if (args.Length !=1)
+            {
+                Console.Error.Write("Wrong number of arguments \n");
+                return;
+            }
             string[] cities = client.ListCity();
 
+            if (cities.Length == 0)
+            {
+                Console.Error.Write("Something went wrong with the request ...\n");
+                return;
+            }
             foreach (string curr in cities)
             {
                 Console.WriteLine(curr);
@@ -121,8 +131,19 @@ namespace Client
 
         public void Process(string[] args)
         {
+            if (args.Length != 2)
+            {
+                Console.Error.Write("Wrong number of arguments\n");
+                return;
+            }
+
             string[] stations = client.ListStation(args[1]);
 
+            if (stations.Length == 0)
+            {
+                Console.Error.Write("Something went wrong with the request ...\n");
+                return;
+            }
             foreach (string curr in stations)
             {
                 Console.WriteLine(curr);
@@ -151,13 +172,20 @@ namespace Client
 
         public void Process(string[] args)
         {
-            int available = client.AvailableBike(args[1], args[2]);
-            if (available == -1)
+            if (args.Length != 3)
             {
-                Console.WriteLine("Wrong argument");
+                Console.Error.Write("Wrong number of arguments\n");
                 return;
             }
-            Console.Write("number of available bike in station ");
+
+            int available = client.AvailableBike(args[1], args[2]);
+
+            if (available == -1)
+            {
+                Console.Error.Write("Something went wrong with the request ...\n");
+                return;
+            }
+            Console.Write("number of available bike in station :");
             Console.WriteLine(available);
         }
     }

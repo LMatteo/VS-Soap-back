@@ -57,14 +57,21 @@ namespace SOAPBike
 
         protected override void Refresh()
         {
-            WebRequest req = WebRequest.Create("https://api.jcdecaux.com/vls/v1/contracts?apiKey=" + BikeService.cred);
-            WebResponse ans = req.GetResponse();
+            try
+            {
+                WebRequest req = WebRequest.Create("https://api.jcdecaux.com/vls/v1/contracts?apiKey=" + BikeService.cred);
+                WebResponse ans = req.GetResponse();
 
-            Stream stream = ans.GetResponseStream();
-            StreamReader reader = new StreamReader(stream);
+                Stream stream = ans.GetResponseStream();
+                StreamReader reader = new StreamReader(stream);
 
-            string strAns = reader.ReadToEnd();
-            this.content = JsonConvert.DeserializeObject<City[]>(strAns);
+                string strAns = reader.ReadToEnd();
+                this.content = JsonConvert.DeserializeObject<City[]>(strAns);
+            } catch (Exception e)
+            {
+                Console.Write(e);
+                this.content = new City[0];
+            }
 
         }
     }
@@ -80,14 +87,21 @@ namespace SOAPBike
 
         protected override void Refresh()
         {
-            WebRequest req = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?contract=" + city + "&apiKey=" + BikeService.cred);
-            WebResponse ans = req.GetResponse();
+            try
+            {
+                WebRequest req = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?contract=" + city + "&apiKey=" + BikeService.cred);
+                WebResponse ans = req.GetResponse();
 
-            Stream stream = ans.GetResponseStream();
-            StreamReader reader = new StreamReader(stream);
+                Stream stream = ans.GetResponseStream();
+                StreamReader reader = new StreamReader(stream);
 
-            string strAns = reader.ReadToEnd();
-            this.content = JsonConvert.DeserializeObject<Station[]>(strAns);
+                string strAns = reader.ReadToEnd();
+                this.content = JsonConvert.DeserializeObject<Station[]>(strAns);
+            } catch (Exception e)
+            {
+                Console.Write(e);
+                this.content = new Station[0];
+            }
         }
     }
 
