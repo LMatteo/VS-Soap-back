@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 
-namespace WcfServiceLibrary1
+namespace SOAPBike
 {
     [ServiceContract]
-    public interface IMathsOperation
+    public interface IBikeService
     {
         [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
         [OperationContract]
-        int add(int a, int b);
+        string[] ListStation(string city);
 
         [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
         [OperationContract]
-        int multiply(int a, int b);
+        int AvailableBike(string city, string station);
+
+        [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+        [OperationContract]
+        string[] ListCity();
     }
 }
