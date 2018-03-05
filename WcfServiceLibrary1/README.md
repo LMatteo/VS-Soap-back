@@ -1,4 +1,4 @@
-#CLIENT
+# CLIENT
 
 I couldn't make it work using Visual Studio 
 
@@ -8,7 +8,7 @@ BikeServiceClient class produced using :
 
 svcutil.exe http://localhost/BikeService?wsdl
 
-##BUILD
+## BUILD
 
 use the developer console and in the right folder use :
 
@@ -16,11 +16,11 @@ csc BikeService.cs CommandHandler.cs Program.cs
 
 this will produce the Program.exe
 
-#SOAPBIKE
+# SOAPBIKE
 
 Use Visual Studio to launch 
 
-#Extension : Cache 
+# Extension : Cache 
 
 the Cache class in Cache.cs is a container for any type
 
