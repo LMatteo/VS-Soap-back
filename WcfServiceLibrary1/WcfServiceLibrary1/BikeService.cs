@@ -11,21 +11,24 @@ namespace SOAPBike
 {
     class BikeService : IBikeService
     {
-        private const string cred = "a3f1a3079fb702635ae5def736dc687e65b222db";
-
+        public static int refreshTime = 10;
+        public static string cred = "a3f1a3079fb702635ae5def736dc687e65b222db";
+        private static Cache<City[]> cityCache = new CityCache(refreshTime);
+        private static Dictionary<string, Cache<Station[]>> cacheMap = new Dictionary<string, Cache<Station[]>>();
 
         public int AvailableBike(string city, string station)
         {
-            WebRequest req = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?contract=" + city + "&apiKey=" + cred);
-            WebResponse ans = req.GetResponse();
-
-            Stream stream = ans.GetResponseStream();
-            StreamReader reader = new StreamReader(stream);
-
-            string strAns = reader.ReadToEnd();
-            Station[] stations = JsonConvert.DeserializeObject<Station[]>(strAns);
-
-            List<string> res = new List<string>();
+            Station[] stations;
+            try
+            {
+                stations = cacheMap[city].GetContent();
+            }
+            catch (KeyNotFoundException)
+            {
+                Cache<Station[]> cache = new StationCache(refreshTime, city);
+                cacheMap.Add(city, cache);
+                stations = cache.GetContent();
+            }
 
             foreach (Station current in stations)
             {
@@ -39,18 +42,12 @@ namespace SOAPBike
 
         public string[] ListCity()
         {
-            WebRequest req = WebRequest.Create("https://api.jcdecaux.com/vls/v1/contracts?apiKey=" + cred);
-            WebResponse ans = req.GetResponse();
 
-            Stream stream = ans.GetResponseStream();
-            StreamReader reader = new StreamReader(stream);
-
-            string strAns = reader.ReadToEnd();
-            City[] stations = JsonConvert.DeserializeObject<City[]>(strAns);
+            City[] cities = cityCache.GetContent();
 
             List<string> res = new List<string>();
 
-            foreach (City city in stations)
+            foreach (City city in cities)
             {
                 res.Add(city.name);
             }
@@ -60,14 +57,18 @@ namespace SOAPBike
 
         public string[] ListStation(string city)
         {
-            WebRequest req = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?contract=" + city + "&apiKey=" + cred);
-            WebResponse ans = req.GetResponse();
+            Station[] stations;
+            try
+            {
+                stations = cacheMap[city].GetContent();
+            }
+            catch (KeyNotFoundException)
+            {
+                Cache<Station[]> cache = new StationCache(refreshTime, city);
+                cacheMap.Add(city, cache);
+                stations = cache.GetContent();
+            }
 
-            Stream stream = ans.GetResponseStream();
-            StreamReader reader = new StreamReader(stream);
-
-            string strAns = reader.ReadToEnd();
-            Station[] stations = JsonConvert.DeserializeObject<Station[]>(strAns);
 
             List<string> res = new List<string>();
 
