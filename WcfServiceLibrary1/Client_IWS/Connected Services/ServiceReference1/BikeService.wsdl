@@ -71,7 +71,7 @@
   </wsdl:binding>
   <wsdl:service name="BikeService">
     <wsdl:port name="BaseEndpoint" binding="tns:BaseEndpoint">
-      <soap:address location="http://localhost:8732/" />
+      <soap:address location="http://localhost:8732/BikeService" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

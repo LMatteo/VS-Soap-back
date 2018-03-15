@@ -15,6 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client_IWS", "Client_IWS\Cl
 		{40C30592-29D6-4B56-8EB2-DD0770CE69E9} = {40C30592-29D6-4B56-8EB2-DD0770CE69E9}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitorGUI", "MonitorGUI\MonitorGUI.csproj", "{34423E40-68A0-4B00-8428-6DFD54E8D429}"
+	ProjectSection(ProjectDependencies) = postProject
+		{40C30592-29D6-4B56-8EB2-DD0770CE69E9} = {40C30592-29D6-4B56-8EB2-DD0770CE69E9}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +34,10 @@ Global
 		{9ED7E3AD-97A1-4813-B180-733190CB5E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ED7E3AD-97A1-4813-B180-733190CB5E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ED7E3AD-97A1-4813-B180-733190CB5E1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34423E40-68A0-4B00-8428-6DFD54E8D429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34423E40-68A0-4B00-8428-6DFD54E8D429}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34423E40-68A0-4B00-8428-6DFD54E8D429}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34423E40-68A0-4B00-8428-6DFD54E8D429}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

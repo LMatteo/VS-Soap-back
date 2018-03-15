@@ -49,6 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cache.cs" />
+    <Compile Include="IMonitorService.cs" />
+    <Compile Include="MonitorService.cs" />
+    <Compile Include="RestRequest.cs" />
     <Compile Include="Objects.cs" />
     <Compile Include="BikeService.cs" />
     <Compile Include="IBikeService.cs" />
