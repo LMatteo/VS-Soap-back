@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="97115318-89e5-4996-bca9-0e1a7292f855" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/BikeService?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BikeService.xsd" MetadataType="Schema" ID="b7e8a058-98fb-4d20-a4e3-12c673fd41b5" SourceId="1" SourceUrl="http://localhost/BikeService?xsd=xsd1" />
+    <MetadataFile FileName="BikeService1.xsd" MetadataType="Schema" ID="75fb6679-a588-46a4-b8a6-541f10535307" SourceId="1" SourceUrl="http://localhost/BikeService?xsd=xsd0" />
+    <MetadataFile FileName="BikeService2.xsd" MetadataType="Schema" ID="0e78e58f-f1d8-4358-9422-60913b69507d" SourceId="1" SourceUrl="http://localhost/BikeService?xsd=xsd2" />
+    <MetadataFile FileName="BikeService.wsdl" MetadataType="Wsdl" ID="89f2fe8e-2284-492a-b264-8ade4f529e9f" SourceId="1" SourceUrl="http://localhost/BikeService?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

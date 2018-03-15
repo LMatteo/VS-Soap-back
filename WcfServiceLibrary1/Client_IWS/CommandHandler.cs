@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Client_IWS.ServiceReference1;
 
-namespace Client
+namespace Client_IWS
 {
     class CommandHandler
     {
@@ -16,7 +17,7 @@ namespace Client
 
         public void Process(string[] args)
         {
-            if(args[0] == "?")
+            if (args[0] == "?")
             {
                 printHelp();
                 return;
@@ -24,7 +25,7 @@ namespace Client
 
             foreach (Command command in commands)
             {
-                if(args[0] == command.GetName())
+                if (args[0] == command.GetName())
                 {
                     command.Process(args);
                     return;
@@ -38,7 +39,7 @@ namespace Client
         private void printHelp()
         {
             Console.WriteLine("? : print help");
-            foreach(Command command in commands)
+            foreach (Command command in commands)
             {
                 Console.WriteLine(command.PrintHelp());
             }
@@ -61,7 +62,7 @@ namespace Client
 
         public string PrintHelp()
         {
-            return GetName() +" : end the program ";
+            return GetName() + " : end the program ";
         }
 
         public void Process(string[] args)
@@ -86,12 +87,12 @@ namespace Client
 
         public string PrintHelp()
         {
-            return GetName() +" : display all the cities";
+            return GetName() + " : display all the cities";
         }
 
         public void Process(string[] args)
         {
-            if (args.Length !=1)
+            if (args.Length != 1)
             {
                 Console.Error.Write("Wrong number of arguments \n");
                 return;

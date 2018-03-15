@@ -1,7 +1,7 @@
 ﻿using System;
+using Client_IWS.ServiceReference1;
 
-
-namespace Client
+namespace Client_IWS
 {
     class Program
     {
@@ -15,7 +15,7 @@ namespace Client
                 new AvailableBikeCommand(client),
                 new ListStationsCommand(client));
 
-            while(true)
+            while (true)
             {
                 Console.Write(">");
                 string input = Console.ReadLine();
