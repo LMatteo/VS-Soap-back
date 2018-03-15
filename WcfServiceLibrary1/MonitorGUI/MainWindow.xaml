@@ -7,9 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="508.896" Width="875">
     <Grid RenderTransformOrigin="0.409,0.599">
-        <Label Content="" HorizontalAlignment="Left" Margin="78,143,0,0" VerticalAlignment="Top" Height="84" Width="223" x:Name="refLabel"/>
-        <Button HorizontalAlignment="Left" Margin="423,143,0,0" VerticalAlignment="Top" Width="234" Height="67" Click="Button_Click">
+        <Label Content="" HorizontalAlignment="Left" Margin="207,117,0,0" VerticalAlignment="Top" Height="26" Width="92" x:Name="requestNb"/>
+        <Button Content="refresh" HorizontalAlignment="Left" Margin="582,35,0,0" VerticalAlignment="Top" Width="165" Height="56" Click="Button_Click">
         </Button>
+        <Label Content="sent requests" HorizontalAlignment="Left" Margin="31,117,0,0" VerticalAlignment="Top"/>
+        <Label Content="Average request time (ms)" HorizontalAlignment="Left" Margin="31,148,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="207,148,0,0" VerticalAlignment="Top" x:Name="execTime"/>
 
     </Grid>
 </Window>

@@ -8,9 +8,14 @@ namespace SOAPBike
 {
     class MonitorService : IMonitorService
     {
+        public long AverageExecTime()
+        {
+            return RequestMetrics.GetAverageExecTime();
+        }
+
         public int NbRequest()
         {
-            return RestRequest.nbReq;
+            return RequestMetrics.nbReq;
         }
     }
 }

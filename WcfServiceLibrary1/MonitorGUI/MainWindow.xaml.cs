@@ -31,7 +31,8 @@ namespace MonitorGUI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            refLabel.Content = client.NbRequest();
+            requestNb.Content = client.NbRequest();
+            execTime.Content = client.AverageExecTime();
         }
     }
 }

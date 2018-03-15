@@ -20,6 +20,12 @@ namespace MonitorGUI.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/NbRequest", ReplyAction="http://tempuri.org/IMonitorService/NbRequestResponse")]
         System.Threading.Tasks.Task<int> NbRequestAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/AverageExecTime", ReplyAction="http://tempuri.org/IMonitorService/AverageExecTimeResponse")]
+        long AverageExecTime();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/AverageExecTime", ReplyAction="http://tempuri.org/IMonitorService/AverageExecTimeResponse")]
+        System.Threading.Tasks.Task<long> AverageExecTimeAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +61,14 @@ namespace MonitorGUI.ServiceReference1 {
         
         public System.Threading.Tasks.Task<int> NbRequestAsync() {
             return base.Channel.NbRequestAsync();
+        }
+        
+        public long AverageExecTime() {
+            return base.Channel.AverageExecTime();
+        }
+        
+        public System.Threading.Tasks.Task<long> AverageExecTimeAsync() {
+            return base.Channel.AverageExecTimeAsync();
         }
     }
 }

@@ -57,7 +57,8 @@ namespace SOAPBike
 
         protected override void Refresh()
         {
-            this.content = RestRequest.getCityListReq();
+            CityRequest req = new CityRequest();
+            this.content = req.Exec();
 
         }
     }
@@ -73,7 +74,8 @@ namespace SOAPBike
 
         protected override void Refresh()
         {
-            this.content = RestRequest.getStationList(city);
+            StationRequest req = new StationRequest(city);
+            this.content = req.Exec();
         }
     }
 

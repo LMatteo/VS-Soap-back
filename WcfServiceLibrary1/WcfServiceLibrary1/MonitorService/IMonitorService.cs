@@ -15,5 +15,9 @@ namespace SOAPBike
         [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
         [OperationContract]
         int NbRequest();
+
+        [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+        [OperationContract] 
+        long AverageExecTime();
     }
 }
