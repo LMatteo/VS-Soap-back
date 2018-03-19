@@ -19,7 +19,7 @@ Use the bike service endpoint provided by the SOAPBike project
 provide BikeService and MonitorService endpoints
 
 Due to the use of WCF the class BikeService and MonitorService are instanciated by the framework. 
-So we don't know where and when they are instanciated. In order to share variable the class member are static 
+So we don't know where and when they are instanciated. To share attributes, class member(especially the caches) are static 
 
 
 # Extension : Cache 
@@ -30,8 +30,7 @@ When instanciated you must specify a refresh time span (in second) or use defaul
 the data is outdated after the specified refresh time. If there is an attemps to get outdated data with the getContent() method, 
 the data is fetched again using the refresh() method
 
-You must inherit the Cache Class and override refresh() to specify how the data will be fetched
-The Cache objects are used as static class member BikeService
+You must inherit the Cache Class and override refresh() to specify how the data will be fetched.
 
 # Extension : Monitoring
 
