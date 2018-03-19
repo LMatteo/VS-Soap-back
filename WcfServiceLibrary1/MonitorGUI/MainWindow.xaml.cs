@@ -27,21 +27,12 @@ namespace MonitorGUI
         {
             InitializeComponent();
             this.client = new MonitorServiceClient();
+            refresh();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                requestNb.Content = client.NbRequest();
-                execTime.Content = client.AverageExecTime();
-                CityCacheTime.Content = client.getCityCacheRefreshTime();
-                StationCacheTime.Content = client.getStationCacheRefreshTime();
-            }
-            catch (Exception ex)
-            {
-                Error.Content = ex.ToString();
-            }
+            refresh();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -67,5 +58,29 @@ namespace MonitorGUI
                 Error.Content = ex.ToString();
             }
         }
+
+        private void refresh()
+        {
+            try
+            {
+                requestNb.Content = client.NbRequest();
+                execTime.Content = client.AverageExecTime();
+                CityCacheTime.Content = client.getCityCacheRefreshTime();
+                StationCacheTime.Content = client.getStationCacheRefreshTime();
+                min.Content = client.getMinExecTime();
+                max.Content = client.getMaxExecTime();
+                string[] urls = client.getUrlList();
+                UrlList.Items.Clear();
+                foreach (string res in urls)
+                {
+                    UrlList.Items.Add(res);
+                }
+            }
+            catch (Exception ex)
+            {
+                Error.Content = ex.ToString();
+            }
+        }
+
     }
 }

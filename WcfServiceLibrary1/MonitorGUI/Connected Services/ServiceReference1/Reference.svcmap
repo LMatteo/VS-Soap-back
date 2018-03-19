@@ -24,6 +24,7 @@
   <Metadata>
     <MetadataFile FileName="MonitorService.xsd" MetadataType="Schema" ID="acf06f62-4610-47cc-880d-11e52aa73c8a" SourceId="1" SourceUrl="http://localhost/MonitorService?xsd=xsd1" />
     <MetadataFile FileName="MonitorService1.xsd" MetadataType="Schema" ID="042038fc-4ad3-41d9-b53f-c6ae441c3f26" SourceId="1" SourceUrl="http://localhost/MonitorService?xsd=xsd0" />
+    <MetadataFile FileName="MonitorService2.xsd" MetadataType="Schema" ID="a56a045e-9904-49b8-ad9b-9f076f8d94c3" SourceId="1" SourceUrl="http://localhost/MonitorService?xsd=xsd2" />
     <MetadataFile FileName="MonitorService.wsdl" MetadataType="Wsdl" ID="12d5351d-5fa1-4fab-a04b-347a53d74698" SourceId="1" SourceUrl="http://localhost/MonitorService?wsdl" />
   </Metadata>
   <Extensions>

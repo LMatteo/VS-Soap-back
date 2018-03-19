@@ -12,12 +12,14 @@ namespace SOAPBike
     public interface IRequest
     {
         long getExecTime();
+        string getUrl();
     }
 
     abstract class Request<T> : IRequest
     {
+        protected string cred = "a3f1a3079fb702635ae5def736dc687e65b222db";
         private long execTime;
-
+        protected string url;
         protected abstract T ExecRequest();
 
         public T Exec()
@@ -35,15 +37,25 @@ namespace SOAPBike
         {
             return this.execTime;
         }
+
+        public string getUrl()
+        {
+            return this.url;
+        }
     }
 
     class CityRequest : Request<City[]>
     {
+        public CityRequest()
+        {
+            this.url = "https://api.jcdecaux.com/vls/v1/contracts?apiKey=" + this.cred;
+        }
+
         protected override City[] ExecRequest()
         {
             try
             {
-                WebRequest req = WebRequest.Create("https://api.jcdecaux.com/vls/v1/contracts?apiKey=" + BikeService.cred);
+                WebRequest req = WebRequest.Create(this.url);
                 WebResponse ans = req.GetResponse();
 
                 Stream stream = ans.GetResponseStream();
@@ -67,13 +79,14 @@ namespace SOAPBike
         public StationRequest(string city)
         {
             this.city = city;
+            this.url = "https://api.jcdecaux.com/vls/v1/stations?contract=" + city + "&apiKey=" + this.cred;
         }
 
         protected override Station[] ExecRequest()
         {
             try
             {
-                WebRequest req = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations?contract=" + city + "&apiKey=" + BikeService.cred);
+                WebRequest req = WebRequest.Create(this.url);
                 WebResponse ans = req.GetResponse();
 
                 Stream stream = ans.GetResponseStream();

@@ -53,7 +53,6 @@
     <Compile Include="MonitorService\MonitorService.cs" />
     <Compile Include="Objects\Request.cs" />
     <Compile Include="Objects\RequestMetrics.cs" />
-    <Compile Include="RestRequest.cs" />
     <Compile Include="Objects\Objects.cs" />
     <Compile Include="BikeService\BikeService.cs" />
     <Compile Include="BikeService\IBikeService.cs" />

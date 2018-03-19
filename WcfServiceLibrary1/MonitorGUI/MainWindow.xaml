@@ -5,25 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MonitorGUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="508.896" Width="875">
+        Title="MainWindow" Height="613.896" Width="1224.5">
     <Grid RenderTransformOrigin="0.409,0.599">
-        <Label Content="" HorizontalAlignment="Left" Margin="207,69,0,0" VerticalAlignment="Top" Height="26" Width="92" x:Name="requestNb"/>
-        <Button Content="refresh" HorizontalAlignment="Left" Margin="31,27,0,0" VerticalAlignment="Top" Width="100" Height="21" Click="Button_Click">
+        <Label Content="" HorizontalAlignment="Left" Margin="208,57,0,0" VerticalAlignment="Top" Height="41" Width="206" x:Name="requestNb"/>
+        <Button Content="refresh" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="179" Height="25" Click="Button_Click">
         </Button>
-        <Label Content="sent requests" HorizontalAlignment="Left" Margin="31,69,0,0" VerticalAlignment="Top"/>
-        <Label Content="Average request time (ms)" HorizontalAlignment="Left" Margin="31,100,0,0" VerticalAlignment="Top"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="207,100,0,0" VerticalAlignment="Top" x:Name="execTime" Width="92"/>
-        <Label Content="City Cache" HorizontalAlignment="Left" Margin="475,69,0,0" VerticalAlignment="Top"/>
-        <Label Content="Station Cache" HorizontalAlignment="Left" Margin="475,197,0,0" VerticalAlignment="Top"/>
-        <Label Content="Refresh Time (s)" HorizontalAlignment="Left" Margin="475,108,0,0" VerticalAlignment="Top"/>
-        <Label Content="Refresh Time (s)" HorizontalAlignment="Left" Margin="475,238,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="475,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="CityTimeSet"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="475,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="StationTimeSet"/>
-        <Button Content="Change Refresh Time" HorizontalAlignment="Left" Margin="712,138,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click_1"/>
-        <Button Content="Change Refresh Time" HorizontalAlignment="Left" Margin="712,268,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click_2"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="649,238,0,0" VerticalAlignment="Top" x:Name="StationCacheTime"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="649,108,0,0" VerticalAlignment="Top" x:Name="CityCacheTime"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="10,426,0,0" VerticalAlignment="Top" Width="847" x:Name="Error"/>
+        <Label Content="sent requests" HorizontalAlignment="Left" Margin="29,57,0,0" VerticalAlignment="Top" Height="41" Width="179"/>
+        <Label Content="Response time (ms)" HorizontalAlignment="Left" Margin="29,107,0,0" VerticalAlignment="Top" Height="42" Width="252"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="29,206,0,0" VerticalAlignment="Top" x:Name="execTime" Width="64" Height="42"/>
+        <Label Content="City Cache" HorizontalAlignment="Left" Margin="661,44,0,0" VerticalAlignment="Top" Height="28" Width="95"/>
+        <Label Content="Station Cache" HorizontalAlignment="Left" Margin="661,183,0,0" VerticalAlignment="Top" Height="29" Width="119"/>
+        <Label Content="Refresh Time (s)" HorizontalAlignment="Left" Margin="661,86,0,0" VerticalAlignment="Top" Height="29" Width="136"/>
+        <Label Content="Refresh Time (s)" HorizontalAlignment="Left" Margin="661,227,0,0" VerticalAlignment="Top" Height="29" Width="136"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="661,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173" x:Name="CityTimeSet"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="661,263,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173" x:Name="StationTimeSet"/>
+        <Button Content="Change Refresh Time" HorizontalAlignment="Left" Margin="1004,118,0,0" VerticalAlignment="Top" Width="181" Click="Button_Click_1" Height="23"/>
+        <Button Content="Change Refresh Time" HorizontalAlignment="Left" Margin="1004,261,0,0" VerticalAlignment="Top" Width="181" Click="Button_Click_2" Height="21"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="913,227,0,0" VerticalAlignment="Top" x:Name="StationCacheTime" Height="29" Width="78"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="913,86,0,0" VerticalAlignment="Top" x:Name="CityCacheTime" Height="29" Width="78"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="144,557,0,0" VerticalAlignment="Top" Width="847" x:Name="Error"/>
+        <Label Content="avg" HorizontalAlignment="Left" Margin="29,159,0,0" VerticalAlignment="Top" Height="42" Width="64"/>
+        <Label Content="min" HorizontalAlignment="Left" Margin="230,159,0,0" VerticalAlignment="Top" Height="42" Width="67"/>
+        <Label Content="max" HorizontalAlignment="Left" Margin="421,159,0,0" VerticalAlignment="Top" Height="42" Width="73"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="421,201,0,0" VerticalAlignment="Top" Width="73" x:Name="max" Height="47"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="230,206,0,0" VerticalAlignment="Top" Width="67" x:Name="min" Height="47"/>
+        <ListBox HorizontalAlignment="Left" Height="169" Margin="53,366,0,0" VerticalAlignment="Top" Width="1089" x:Name="UrlList"/>
+        <Label Content="List of requested url : " HorizontalAlignment="Left" Margin="55,323,0,0" VerticalAlignment="Top" Width="269"/>
 
     </Grid>
 </Window>

@@ -12,7 +12,6 @@ namespace SOAPBike
     class BikeService : IBikeService
     {
         public static int refreshTime = 10; //cache data will be outdated 10 seconds after the request is made
-        public static string cred = "a3f1a3079fb702635ae5def736dc687e65b222db";
         private static Cache<City[]> cityCache = new CityCache(refreshTime);
         private static Dictionary<string, Cache<Station[]>> cacheMap = new Dictionary<string, Cache<Station[]>>();
 

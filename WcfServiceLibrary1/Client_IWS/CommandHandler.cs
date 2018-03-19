@@ -179,7 +179,7 @@ namespace Client_IWS
                 return;
             }
 
-            int available = client.AvailableBike(args[1], args[2]);
+            int available = client.AvailableBike(args[1], args[2].ToUpper());
 
             if (available == -1)
             {

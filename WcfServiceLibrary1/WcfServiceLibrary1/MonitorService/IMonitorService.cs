@@ -35,5 +35,17 @@ namespace SOAPBike
         [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
         [OperationContract]
         void setStationCacheRefreshTime(int time);
+
+        [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+        [OperationContract]
+        long getMaxExecTime();
+
+        [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+        [OperationContract]
+        long getMinExecTime();
+
+        [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+        [OperationContract]
+        string[] getUrlList();
     }
 }

@@ -50,6 +50,24 @@ namespace MonitorGUI.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/setStationCacheRefreshTime", ReplyAction="http://tempuri.org/IMonitorService/setStationCacheRefreshTimeResponse")]
         System.Threading.Tasks.Task setStationCacheRefreshTimeAsync(int time);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/getMaxExecTime", ReplyAction="http://tempuri.org/IMonitorService/getMaxExecTimeResponse")]
+        long getMaxExecTime();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/getMaxExecTime", ReplyAction="http://tempuri.org/IMonitorService/getMaxExecTimeResponse")]
+        System.Threading.Tasks.Task<long> getMaxExecTimeAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/getMinExecTime", ReplyAction="http://tempuri.org/IMonitorService/getMinExecTimeResponse")]
+        long getMinExecTime();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/getMinExecTime", ReplyAction="http://tempuri.org/IMonitorService/getMinExecTimeResponse")]
+        System.Threading.Tasks.Task<long> getMinExecTimeAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/getUrlList", ReplyAction="http://tempuri.org/IMonitorService/getUrlListResponse")]
+        string[] getUrlList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/getUrlList", ReplyAction="http://tempuri.org/IMonitorService/getUrlListResponse")]
+        System.Threading.Tasks.Task<string[]> getUrlListAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -125,6 +143,30 @@ namespace MonitorGUI.ServiceReference1 {
         
         public System.Threading.Tasks.Task setStationCacheRefreshTimeAsync(int time) {
             return base.Channel.setStationCacheRefreshTimeAsync(time);
+        }
+        
+        public long getMaxExecTime() {
+            return base.Channel.getMaxExecTime();
+        }
+        
+        public System.Threading.Tasks.Task<long> getMaxExecTimeAsync() {
+            return base.Channel.getMaxExecTimeAsync();
+        }
+        
+        public long getMinExecTime() {
+            return base.Channel.getMinExecTime();
+        }
+        
+        public System.Threading.Tasks.Task<long> getMinExecTimeAsync() {
+            return base.Channel.getMinExecTimeAsync();
+        }
+        
+        public string[] getUrlList() {
+            return base.Channel.getUrlList();
+        }
+        
+        public System.Threading.Tasks.Task<string[]> getUrlListAsync() {
+            return base.Channel.getUrlListAsync();
         }
     }
 }

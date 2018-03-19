@@ -18,9 +18,24 @@ namespace SOAPBike
             return CityCache.freshTime;
         }
 
+        public long getMaxExecTime()
+        {
+            return RequestMetrics.getMaxExecTime();
+        }
+
+        public long getMinExecTime()
+        {
+            return RequestMetrics.getMinExecTime();
+        }
+
         public int getStationCacheRefreshTime()
         {
             return StationCache.freshTime;
+        }
+
+        public string[] getUrlList()
+        {
+            return RequestMetrics.getUrlList();
         }
 
         public int NbRequest()
@@ -37,5 +52,6 @@ namespace SOAPBike
         {
             StationCache.freshTime = time;
         }
+
     }
 }

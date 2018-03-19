@@ -4,6 +4,7 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost/MonitorService?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost/MonitorService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/MonitorService?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IMonitorService_NbRequest_InputMessage">
@@ -42,6 +43,24 @@
   <wsdl:message name="IMonitorService_setStationCacheRefreshTime_OutputMessage">
     <wsdl:part name="parameters" element="tns:setStationCacheRefreshTimeResponse" />
   </wsdl:message>
+  <wsdl:message name="IMonitorService_getMaxExecTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMaxExecTime" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_getMaxExecTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMaxExecTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_getMinExecTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMinExecTime" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_getMinExecTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMinExecTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_getUrlList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUrlList" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_getUrlList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUrlListResponse" />
+  </wsdl:message>
   <wsdl:portType name="IMonitorService">
     <wsdl:operation name="NbRequest">
       <wsdl:input wsaw:Action="http://tempuri.org/IMonitorService/NbRequest" message="tns:IMonitorService_NbRequest_InputMessage" />
@@ -66,6 +85,18 @@
     <wsdl:operation name="setStationCacheRefreshTime">
       <wsdl:input wsaw:Action="http://tempuri.org/IMonitorService/setStationCacheRefreshTime" message="tns:IMonitorService_setStationCacheRefreshTime_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMonitorService/setStationCacheRefreshTimeResponse" message="tns:IMonitorService_setStationCacheRefreshTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMaxExecTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMonitorService/getMaxExecTime" message="tns:IMonitorService_getMaxExecTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMonitorService/getMaxExecTimeResponse" message="tns:IMonitorService_getMaxExecTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMinExecTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMonitorService/getMinExecTime" message="tns:IMonitorService_getMinExecTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMonitorService/getMinExecTimeResponse" message="tns:IMonitorService_getMinExecTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUrlList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMonitorService/getUrlList" message="tns:IMonitorService_getUrlList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMonitorService/getUrlListResponse" message="tns:IMonitorService_getUrlList_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="MonitorEndpoint" type="tns:IMonitorService">
@@ -117,6 +148,33 @@
     </wsdl:operation>
     <wsdl:operation name="setStationCacheRefreshTime">
       <soap:operation soapAction="http://tempuri.org/IMonitorService/setStationCacheRefreshTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaxExecTime">
+      <soap:operation soapAction="http://tempuri.org/IMonitorService/getMaxExecTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMinExecTime">
+      <soap:operation soapAction="http://tempuri.org/IMonitorService/getMinExecTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUrlList">
+      <soap:operation soapAction="http://tempuri.org/IMonitorService/getUrlList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
