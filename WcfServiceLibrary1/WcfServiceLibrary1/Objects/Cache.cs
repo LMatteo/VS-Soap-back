@@ -24,7 +24,7 @@ namespace SOAPBike
 
         public Cache()
         {
-
+            freshTime = 10;
         }
 
         private bool IsUpToDate()
