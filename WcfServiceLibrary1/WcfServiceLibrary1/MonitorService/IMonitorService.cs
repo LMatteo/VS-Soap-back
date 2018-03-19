@@ -19,5 +19,21 @@ namespace SOAPBike
         [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
         [OperationContract] 
         long AverageExecTime();
+
+        [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+        [OperationContract]
+        int getCityCacheRefreshTime();
+
+        [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+        [OperationContract]
+        void setCityCacheRefreshTime(int time);
+
+        [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+        [OperationContract]
+        int getStationCacheRefreshTime();
+
+        [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+        [OperationContract]
+        void setStationCacheRefreshTime(int time);
     }
 }

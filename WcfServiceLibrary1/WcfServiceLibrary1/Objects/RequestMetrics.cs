@@ -11,7 +11,7 @@ namespace SOAPBike
         public static int nbReq = 0;
         public static List<IRequest> requests = new List<IRequest>();
 
-        public static void addRequest(IRequest req)
+        public static void AddRequest(IRequest req)
         {
             requests.Add(req);
         }

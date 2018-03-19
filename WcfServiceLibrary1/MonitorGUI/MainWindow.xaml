@@ -7,12 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="508.896" Width="875">
     <Grid RenderTransformOrigin="0.409,0.599">
-        <Label Content="" HorizontalAlignment="Left" Margin="207,117,0,0" VerticalAlignment="Top" Height="26" Width="92" x:Name="requestNb"/>
-        <Button Content="refresh" HorizontalAlignment="Left" Margin="582,35,0,0" VerticalAlignment="Top" Width="165" Height="56" Click="Button_Click">
+        <Label Content="" HorizontalAlignment="Left" Margin="207,69,0,0" VerticalAlignment="Top" Height="26" Width="92" x:Name="requestNb"/>
+        <Button Content="refresh" HorizontalAlignment="Left" Margin="31,27,0,0" VerticalAlignment="Top" Width="100" Height="21" Click="Button_Click">
         </Button>
-        <Label Content="sent requests" HorizontalAlignment="Left" Margin="31,117,0,0" VerticalAlignment="Top"/>
-        <Label Content="Average request time (ms)" HorizontalAlignment="Left" Margin="31,148,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="207,148,0,0" VerticalAlignment="Top" x:Name="execTime"/>
+        <Label Content="sent requests" HorizontalAlignment="Left" Margin="31,69,0,0" VerticalAlignment="Top"/>
+        <Label Content="Average request time (ms)" HorizontalAlignment="Left" Margin="31,100,0,0" VerticalAlignment="Top"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="207,100,0,0" VerticalAlignment="Top" x:Name="execTime" Width="92"/>
+        <Label Content="City Cache" HorizontalAlignment="Left" Margin="475,69,0,0" VerticalAlignment="Top"/>
+        <Label Content="Station Cache" HorizontalAlignment="Left" Margin="475,197,0,0" VerticalAlignment="Top"/>
+        <Label Content="Refresh Time " HorizontalAlignment="Left" Margin="475,108,0,0" VerticalAlignment="Top"/>
+        <Label Content="Refresh Time" HorizontalAlignment="Left" Margin="475,238,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="475,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="475,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
+        <Button Content="Change Refresh Time" HorizontalAlignment="Left" Margin="712,138,0,0" VerticalAlignment="Top" Width="125" Click="Button_Click_1"/>
+        <Button Content="Change Refresh Time" HorizontalAlignment="Left" Margin="712,268,0,0" VerticalAlignment="Top" Width="125"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="649,238,0,0" VerticalAlignment="Top" x:Name="CityCacheTime"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="649,108,0,0" VerticalAlignment="Top" x:Name="StationCacheTime"/>
 
     </Grid>
 </Window>

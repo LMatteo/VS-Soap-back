@@ -23,6 +23,7 @@ namespace SOAPBike
         public T Exec()
         {
             RequestMetrics.nbReq++;
+            RequestMetrics.AddRequest(this);
             var watch = System.Diagnostics.Stopwatch.StartNew();
             T val = ExecRequest();
             watch.Stop();

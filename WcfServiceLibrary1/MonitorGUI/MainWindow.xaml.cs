@@ -34,5 +34,10 @@ namespace MonitorGUI
             requestNb.Content = client.NbRequest();
             execTime.Content = client.AverageExecTime();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

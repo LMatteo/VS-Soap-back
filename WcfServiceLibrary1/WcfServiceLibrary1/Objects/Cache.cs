@@ -14,12 +14,17 @@ namespace SOAPBike
     {
         protected T content;
         private DateTime lastRefresh;
-        private int freshTime;
+        private static int freshTime;
 
         // freshTime : time in second before content need to be fetch again
-        public Cache(int freshTime)
+        public Cache(int refreshTime)
         {
-            this.freshTime = freshTime;
+            freshTime = refreshTime;
+        }
+
+        public Cache()
+        {
+
         }
 
         private bool IsUpToDate()
