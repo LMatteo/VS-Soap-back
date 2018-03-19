@@ -18,6 +18,30 @@
   <wsdl:message name="IMonitorService_AverageExecTime_OutputMessage">
     <wsdl:part name="parameters" element="tns:AverageExecTimeResponse" />
   </wsdl:message>
+  <wsdl:message name="IMonitorService_getCityCacheRefreshTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCityCacheRefreshTime" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_getCityCacheRefreshTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCityCacheRefreshTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_setCityCacheRefreshTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:setCityCacheRefreshTime" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_setCityCacheRefreshTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setCityCacheRefreshTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_getStationCacheRefreshTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStationCacheRefreshTime" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_getStationCacheRefreshTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStationCacheRefreshTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_setStationCacheRefreshTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:setStationCacheRefreshTime" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_setStationCacheRefreshTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setStationCacheRefreshTimeResponse" />
+  </wsdl:message>
   <wsdl:portType name="IMonitorService">
     <wsdl:operation name="NbRequest">
       <wsdl:input wsaw:Action="http://tempuri.org/IMonitorService/NbRequest" message="tns:IMonitorService_NbRequest_InputMessage" />
@@ -26,6 +50,22 @@
     <wsdl:operation name="AverageExecTime">
       <wsdl:input wsaw:Action="http://tempuri.org/IMonitorService/AverageExecTime" message="tns:IMonitorService_AverageExecTime_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMonitorService/AverageExecTimeResponse" message="tns:IMonitorService_AverageExecTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCityCacheRefreshTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMonitorService/getCityCacheRefreshTime" message="tns:IMonitorService_getCityCacheRefreshTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMonitorService/getCityCacheRefreshTimeResponse" message="tns:IMonitorService_getCityCacheRefreshTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setCityCacheRefreshTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMonitorService/setCityCacheRefreshTime" message="tns:IMonitorService_setCityCacheRefreshTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMonitorService/setCityCacheRefreshTimeResponse" message="tns:IMonitorService_setCityCacheRefreshTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getStationCacheRefreshTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMonitorService/getStationCacheRefreshTime" message="tns:IMonitorService_getStationCacheRefreshTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMonitorService/getStationCacheRefreshTimeResponse" message="tns:IMonitorService_getStationCacheRefreshTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setStationCacheRefreshTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMonitorService/setStationCacheRefreshTime" message="tns:IMonitorService_setStationCacheRefreshTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMonitorService/setStationCacheRefreshTimeResponse" message="tns:IMonitorService_setStationCacheRefreshTime_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="MonitorEndpoint" type="tns:IMonitorService">
@@ -41,6 +81,42 @@
     </wsdl:operation>
     <wsdl:operation name="AverageExecTime">
       <soap:operation soapAction="http://tempuri.org/IMonitorService/AverageExecTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCityCacheRefreshTime">
+      <soap:operation soapAction="http://tempuri.org/IMonitorService/getCityCacheRefreshTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setCityCacheRefreshTime">
+      <soap:operation soapAction="http://tempuri.org/IMonitorService/setCityCacheRefreshTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStationCacheRefreshTime">
+      <soap:operation soapAction="http://tempuri.org/IMonitorService/getStationCacheRefreshTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setStationCacheRefreshTime">
+      <soap:operation soapAction="http://tempuri.org/IMonitorService/setStationCacheRefreshTime" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

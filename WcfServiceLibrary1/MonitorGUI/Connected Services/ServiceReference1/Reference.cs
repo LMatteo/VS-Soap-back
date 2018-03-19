@@ -26,6 +26,30 @@ namespace MonitorGUI.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/AverageExecTime", ReplyAction="http://tempuri.org/IMonitorService/AverageExecTimeResponse")]
         System.Threading.Tasks.Task<long> AverageExecTimeAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/getCityCacheRefreshTime", ReplyAction="http://tempuri.org/IMonitorService/getCityCacheRefreshTimeResponse")]
+        int getCityCacheRefreshTime();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/getCityCacheRefreshTime", ReplyAction="http://tempuri.org/IMonitorService/getCityCacheRefreshTimeResponse")]
+        System.Threading.Tasks.Task<int> getCityCacheRefreshTimeAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/setCityCacheRefreshTime", ReplyAction="http://tempuri.org/IMonitorService/setCityCacheRefreshTimeResponse")]
+        void setCityCacheRefreshTime(int time);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/setCityCacheRefreshTime", ReplyAction="http://tempuri.org/IMonitorService/setCityCacheRefreshTimeResponse")]
+        System.Threading.Tasks.Task setCityCacheRefreshTimeAsync(int time);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/getStationCacheRefreshTime", ReplyAction="http://tempuri.org/IMonitorService/getStationCacheRefreshTimeResponse")]
+        int getStationCacheRefreshTime();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/getStationCacheRefreshTime", ReplyAction="http://tempuri.org/IMonitorService/getStationCacheRefreshTimeResponse")]
+        System.Threading.Tasks.Task<int> getStationCacheRefreshTimeAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/setStationCacheRefreshTime", ReplyAction="http://tempuri.org/IMonitorService/setStationCacheRefreshTimeResponse")]
+        void setStationCacheRefreshTime(int time);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/setStationCacheRefreshTime", ReplyAction="http://tempuri.org/IMonitorService/setStationCacheRefreshTimeResponse")]
+        System.Threading.Tasks.Task setStationCacheRefreshTimeAsync(int time);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,6 +93,38 @@ namespace MonitorGUI.ServiceReference1 {
         
         public System.Threading.Tasks.Task<long> AverageExecTimeAsync() {
             return base.Channel.AverageExecTimeAsync();
+        }
+        
+        public int getCityCacheRefreshTime() {
+            return base.Channel.getCityCacheRefreshTime();
+        }
+        
+        public System.Threading.Tasks.Task<int> getCityCacheRefreshTimeAsync() {
+            return base.Channel.getCityCacheRefreshTimeAsync();
+        }
+        
+        public void setCityCacheRefreshTime(int time) {
+            base.Channel.setCityCacheRefreshTime(time);
+        }
+        
+        public System.Threading.Tasks.Task setCityCacheRefreshTimeAsync(int time) {
+            return base.Channel.setCityCacheRefreshTimeAsync(time);
+        }
+        
+        public int getStationCacheRefreshTime() {
+            return base.Channel.getStationCacheRefreshTime();
+        }
+        
+        public System.Threading.Tasks.Task<int> getStationCacheRefreshTimeAsync() {
+            return base.Channel.getStationCacheRefreshTimeAsync();
+        }
+        
+        public void setStationCacheRefreshTime(int time) {
+            base.Channel.setStationCacheRefreshTime(time);
+        }
+        
+        public System.Threading.Tasks.Task setStationCacheRefreshTimeAsync(int time) {
+            return base.Channel.setStationCacheRefreshTimeAsync(time);
         }
     }
 }

@@ -31,13 +31,41 @@ namespace MonitorGUI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            requestNb.Content = client.NbRequest();
-            execTime.Content = client.AverageExecTime();
+            try
+            {
+                requestNb.Content = client.NbRequest();
+                execTime.Content = client.AverageExecTime();
+                CityCacheTime.Content = client.getCityCacheRefreshTime();
+                StationCacheTime.Content = client.getStationCacheRefreshTime();
+            }
+            catch (Exception ex)
+            {
+                Error.Content = ex.ToString();
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                client.setCityCacheRefreshTime(Int32.Parse(CityTimeSet.Text));
+                CityCacheTime.Content = client.getCityCacheRefreshTime();
+            }catch(Exception ex)
+            {
+                Error.Content = ex.ToString();
+            }
+        }
 
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                client.setStationCacheRefreshTime(Int32.Parse(StationTimeSet.Text));
+                StationCacheTime.Content = client.getStationCacheRefreshTime();
+            }catch(Exception ex)
+            {
+                Error.Content = ex.ToString();
+            }
         }
     }
 }

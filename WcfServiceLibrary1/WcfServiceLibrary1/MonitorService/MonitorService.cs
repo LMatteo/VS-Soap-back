@@ -15,12 +15,12 @@ namespace SOAPBike
 
         public int getCityCacheRefreshTime()
         {
-            return CityCache.
+            return CityCache.freshTime;
         }
 
         public int getStationCacheRefreshTime()
         {
-            throw new NotImplementedException();
+            return StationCache.freshTime;
         }
 
         public int NbRequest()
@@ -30,12 +30,12 @@ namespace SOAPBike
 
         public void setCityCacheRefreshTime(int time)
         {
-            throw new NotImplementedException();
+            CityCache.freshTime = time;
         }
 
         public void setStationCacheRefreshTime(int time)
         {
-            throw new NotImplementedException();
+            StationCache.freshTime = time;
         }
     }
 }

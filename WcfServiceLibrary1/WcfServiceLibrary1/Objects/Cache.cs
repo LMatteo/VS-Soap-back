@@ -14,7 +14,7 @@ namespace SOAPBike
     {
         protected T content;
         private DateTime lastRefresh;
-        private static int freshTime;
+        public static int freshTime;
 
         // freshTime : time in second before content need to be fetch again
         public Cache(int refreshTime)
