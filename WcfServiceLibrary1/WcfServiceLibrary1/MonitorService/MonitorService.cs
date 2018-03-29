@@ -13,6 +13,11 @@ namespace SOAPBike
             return RequestMetrics.GetAverageExecTime();
         }
 
+        public int getCityCacheRefresh()
+        {
+            return CityCache.nbRefresh;
+        }
+
         public int getCityCacheRefreshTime()
         {
             return CityCache.freshTime;
@@ -26,6 +31,11 @@ namespace SOAPBike
         public long getMinExecTime()
         {
             return RequestMetrics.getMinExecTime();
+        }
+
+        public int getStationCacheRefresh()
+        {
+            return StationCache.nbRefresh;
         }
 
         public int getStationCacheRefreshTime()

@@ -37,6 +37,7 @@ namespace SOAPBike
         {
             this.Refresh();
             lastRefresh = DateTime.Now;
+            
         }
 
         protected abstract void Refresh();
@@ -56,6 +57,7 @@ namespace SOAPBike
 
     class CityCache : Cache<City[]>
     {
+        public static int nbRefresh = 0;
         public CityCache(int freshTime) : base(freshTime)
         {
         }
@@ -64,12 +66,14 @@ namespace SOAPBike
         {
             CityRequest req = new CityRequest();
             this.content = req.Exec();
+            nbRefresh++;
 
         }
     }
 
     class StationCache : Cache<Station[]>
     {
+        public static int nbRefresh = 0;
         private string city;
 
         public StationCache(int freshTime, string city) : base(freshTime)
@@ -81,6 +85,7 @@ namespace SOAPBike
         {
             StationRequest req = new StationRequest(city);
             this.content = req.Exec();
+            nbRefresh++;
         }
     }
 

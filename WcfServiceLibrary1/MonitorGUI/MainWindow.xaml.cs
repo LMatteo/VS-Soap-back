@@ -69,6 +69,8 @@ namespace MonitorGUI
                 StationCacheTime.Content = client.getStationCacheRefreshTime();
                 min.Content = client.getMinExecTime();
                 max.Content = client.getMaxExecTime();
+                CityNbRefresh.Content = client.getCityCacheRefresh();
+                StationNbRefresh.Content = client.getStationCacheRefresh();
                 string[] urls = client.getUrlList();
                 UrlList.Items.Clear();
                 foreach (string res in urls)

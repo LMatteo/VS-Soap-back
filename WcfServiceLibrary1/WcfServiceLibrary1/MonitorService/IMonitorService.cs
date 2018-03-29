@@ -47,5 +47,13 @@ namespace SOAPBike
         [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
         [OperationContract]
         string[] getUrlList();
+
+        [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+        [OperationContract]
+        int getCityCacheRefresh();
+
+        [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+        [OperationContract]
+        int getStationCacheRefresh();
     }
 }

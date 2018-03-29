@@ -68,6 +68,18 @@ namespace MonitorGUI.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/getUrlList", ReplyAction="http://tempuri.org/IMonitorService/getUrlListResponse")]
         System.Threading.Tasks.Task<string[]> getUrlListAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/getCityCacheRefresh", ReplyAction="http://tempuri.org/IMonitorService/getCityCacheRefreshResponse")]
+        int getCityCacheRefresh();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/getCityCacheRefresh", ReplyAction="http://tempuri.org/IMonitorService/getCityCacheRefreshResponse")]
+        System.Threading.Tasks.Task<int> getCityCacheRefreshAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/getStationCacheRefresh", ReplyAction="http://tempuri.org/IMonitorService/getStationCacheRefreshResponse")]
+        int getStationCacheRefresh();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMonitorService/getStationCacheRefresh", ReplyAction="http://tempuri.org/IMonitorService/getStationCacheRefreshResponse")]
+        System.Threading.Tasks.Task<int> getStationCacheRefreshAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -167,6 +179,22 @@ namespace MonitorGUI.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string[]> getUrlListAsync() {
             return base.Channel.getUrlListAsync();
+        }
+        
+        public int getCityCacheRefresh() {
+            return base.Channel.getCityCacheRefresh();
+        }
+        
+        public System.Threading.Tasks.Task<int> getCityCacheRefreshAsync() {
+            return base.Channel.getCityCacheRefreshAsync();
+        }
+        
+        public int getStationCacheRefresh() {
+            return base.Channel.getStationCacheRefresh();
+        }
+        
+        public System.Threading.Tasks.Task<int> getStationCacheRefreshAsync() {
+            return base.Channel.getStationCacheRefreshAsync();
         }
     }
 }

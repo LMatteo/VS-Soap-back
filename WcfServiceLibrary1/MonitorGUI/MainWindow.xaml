@@ -31,6 +31,10 @@
         <Label Content="" HorizontalAlignment="Left" Margin="230,206,0,0" VerticalAlignment="Top" Width="67" x:Name="min" Height="47"/>
         <ListBox HorizontalAlignment="Left" Height="169" Margin="53,366,0,0" VerticalAlignment="Top" Width="1089" x:Name="UrlList"/>
         <Label Content="List of requested url : " HorizontalAlignment="Left" Margin="55,323,0,0" VerticalAlignment="Top" Width="269"/>
+        <Label Content="Number of refresh" HorizontalAlignment="Left" Margin="661,150,0,0" VerticalAlignment="Top" Width="173"/>
+        <Label Content="Number of refresh" HorizontalAlignment="Left" Margin="661,292,0,0" VerticalAlignment="Top" Width="173"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="1004,150,0,0" VerticalAlignment="Top" Width="110" x:Name="CityNbRefresh"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="1004,292,0,0" VerticalAlignment="Top" Width="110" x:Name="StationNbRefresh"/>
 
     </Grid>
 </Window>

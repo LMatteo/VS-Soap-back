@@ -61,6 +61,18 @@
   <wsdl:message name="IMonitorService_getUrlList_OutputMessage">
     <wsdl:part name="parameters" element="tns:getUrlListResponse" />
   </wsdl:message>
+  <wsdl:message name="IMonitorService_getCityCacheRefresh_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCityCacheRefresh" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_getCityCacheRefresh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCityCacheRefreshResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_getStationCacheRefresh_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStationCacheRefresh" />
+  </wsdl:message>
+  <wsdl:message name="IMonitorService_getStationCacheRefresh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStationCacheRefreshResponse" />
+  </wsdl:message>
   <wsdl:portType name="IMonitorService">
     <wsdl:operation name="NbRequest">
       <wsdl:input wsaw:Action="http://tempuri.org/IMonitorService/NbRequest" message="tns:IMonitorService_NbRequest_InputMessage" />
@@ -97,6 +109,14 @@
     <wsdl:operation name="getUrlList">
       <wsdl:input wsaw:Action="http://tempuri.org/IMonitorService/getUrlList" message="tns:IMonitorService_getUrlList_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMonitorService/getUrlListResponse" message="tns:IMonitorService_getUrlList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCityCacheRefresh">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMonitorService/getCityCacheRefresh" message="tns:IMonitorService_getCityCacheRefresh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMonitorService/getCityCacheRefreshResponse" message="tns:IMonitorService_getCityCacheRefresh_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getStationCacheRefresh">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMonitorService/getStationCacheRefresh" message="tns:IMonitorService_getStationCacheRefresh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMonitorService/getStationCacheRefreshResponse" message="tns:IMonitorService_getStationCacheRefresh_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="MonitorEndpoint" type="tns:IMonitorService">
@@ -175,6 +195,24 @@
     </wsdl:operation>
     <wsdl:operation name="getUrlList">
       <soap:operation soapAction="http://tempuri.org/IMonitorService/getUrlList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCityCacheRefresh">
+      <soap:operation soapAction="http://tempuri.org/IMonitorService/getCityCacheRefresh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStationCacheRefresh">
+      <soap:operation soapAction="http://tempuri.org/IMonitorService/getStationCacheRefresh" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
