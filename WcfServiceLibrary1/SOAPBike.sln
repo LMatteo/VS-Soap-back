@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitorGUI", "MonitorGUI\Mo
 		{40C30592-29D6-4B56-8EB2-DD0770CE69E9} = {40C30592-29D6-4B56-8EB2-DD0770CE69E9}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{35CD5094-8A52-4D2E-A3DF-FC31F5A5935D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{34423E40-68A0-4B00-8428-6DFD54E8D429}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34423E40-68A0-4B00-8428-6DFD54E8D429}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34423E40-68A0-4B00-8428-6DFD54E8D429}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35CD5094-8A52-4D2E-A3DF-FC31F5A5935D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35CD5094-8A52-4D2E-A3DF-FC31F5A5935D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35CD5094-8A52-4D2E-A3DF-FC31F5A5935D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35CD5094-8A52-4D2E-A3DF-FC31F5A5935D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

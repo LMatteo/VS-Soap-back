@@ -12,6 +12,7 @@ namespace SOAPBike
         public string name;
         public string address;
         public int available_bike_stands;
+
     }
 
     class City

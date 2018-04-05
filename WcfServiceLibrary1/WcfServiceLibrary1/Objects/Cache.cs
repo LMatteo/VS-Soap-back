@@ -15,6 +15,7 @@ namespace SOAPBike
         protected T content;
         private DateTime lastRefresh;
         public static int freshTime;
+        private bool isSubscribed = false;
 
         // freshTime : time in second before content need to be fetch again
         public Cache(int refreshTime)
@@ -40,7 +41,17 @@ namespace SOAPBike
             
         }
 
+        public async void Subsribe()
+        {
+            while (true)
+            {
+                SubscribeMethod();
+                await Task.Delay(freshTime*100);
+            }
+        }
+
         protected abstract void Refresh();
+        protected abstract void SubscribeMethod();
 
         public T GetContent()
         {
@@ -69,6 +80,11 @@ namespace SOAPBike
             nbRefresh++;
 
         }
+
+        protected override void SubscribeMethod()
+        {
+            throw new NotImplementedException();
+        }
     }
 
     class StationCache : Cache<Station[]>
@@ -86,6 +102,14 @@ namespace SOAPBike
             StationRequest req = new StationRequest(city);
             this.content = req.Exec();
             nbRefresh++;
+        }
+
+        protected override void SubscribeMethod()
+        {
+            foreach(Station station in this.content)
+            {
+                SOAPBike.EventService.BikeService.update(this.city, station.ToString());
+            }
         }
     }
 

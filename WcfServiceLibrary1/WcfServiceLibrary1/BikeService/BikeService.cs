@@ -13,7 +13,15 @@ namespace SOAPBike
     {
         public static int refreshTime = 10; //cache data will be outdated 10 seconds after the request is made
         private static Cache<City[]> cityCache = new CityCache(refreshTime);
-        private static Dictionary<string, Cache<Station[]>> cacheMap = new Dictionary<string, Cache<Station[]>>();
+        public static Dictionary<string, Cache<Station[]>> cacheMap = new Dictionary<string, Cache<Station[]>>();
+
+        public static void CreateCache(string city)
+        {
+            if (!cacheMap.ContainsKey(city))
+            {
+                cacheMap[city] = new StationCache(BikeService.refreshTime, city);
+            }
+        }
 
         public int AvailableBike(string city, string station)
         {
